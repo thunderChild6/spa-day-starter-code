@@ -15,6 +15,16 @@
 </div>
 
 <div id = "servicesMenu">
+    <table>
+        <tr>
+            <th>Facials for your skin type:</th>
+        </tr>
+        <th:block th:each = "facial : ${appropriateFacials}">
+            <tr>
+                <td th:text="${facial}"></td>
+            </tr>
+        </th:block>
+    </table>
 </div>
 </body>
 </html>

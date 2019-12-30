@@ -82,6 +82,14 @@ public class SpaDayController {
             }
         }
 
+        System.out.println("Name: " + name + "\nSkin Type: " + skintype + "\nManiPedi: " + manipedi);
+        System.out.println(appropriateFacials);
+
+        model.addAttribute("name", name);
+        model.addAttribute("skintype", skintype);
+        model.addAttribute("manipedi", manipedi);
+        model.addAttribute("appropriateFacials", appropriateFacials);
+
         return "menu";
     }
 }
