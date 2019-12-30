@@ -15,9 +15,11 @@
 </div>
 
 <div id = "servicesMenu">
+    <h2>Menu of Available Services</h2>
+    <h3>Facial Treatments</h3>
     <table>
         <tr>
-            <th>Facials for your skin type:</th>
+            <th>For your skin type:</th>
         </tr>
         <th:block th:each = "facial : ${appropriateFacials}">
             <tr>
@@ -25,6 +27,17 @@
             </tr>
         </th:block>
     </table>
+
+    <div th:if="${manipedi.equals('manicure')}">
+        <h3>Manicure</h3>
+        <p th:replace="fragments :: manicureDescription">mani descrip</p>
+    </div>
+
+    <div th:if="${manipedi.equals('pedicure')}">
+        <h3>Pedicure</h3>
+        <p th:replace="fragments :: pedicureDescription">pedi descrip</p>
+    </div>
+
 </div>
 </body>
 </html>
