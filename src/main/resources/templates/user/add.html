@@ -11,12 +11,12 @@
 <form method="post">
     <div>
         <label>User Name
-            <input type="text" name="username" />
+            <input type="text" name="username" th:value="${username}" />
         </label>
     </div>
     <div>
         <label>E-mail
-            <input type="email" name="email" />
+            <input type="email" name="email" th:value="${email}" />
         </label>
     </div>
     <div>
@@ -28,6 +28,9 @@
         <label>Verify password
             <input type="password" name="verify" />
         </label>
+    </div>
+    <div>
+        <p th:if="${error}">Passwords do not match. Please try again.</p>
     </div>
     <div>
         <input type="submit" value="Add Me!" />

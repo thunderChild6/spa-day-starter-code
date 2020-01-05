@@ -22,10 +22,13 @@ public class UserController {
     @PostMapping("add")
     public String processAddUserForm(Model model, @ModelAttribute User user, String verify) {
         System.out.println("add method reached--post " + user.getPassword() +" "+ verify);
-        model.addAttribute(user);
-        model.addAttribute(verify);
+        Boolean error;
+        model.addAttribute("username", user.getUsername());
+        model.addAttribute("email", user.getEmail());
+        model.addAttribute("error", true);
         if (user.getPassword().equals(verify)) {
             System.out.println("passwords match");
+            error = false;
         return "user/index";
         } else {
             System.out.println("passwords don't match");
