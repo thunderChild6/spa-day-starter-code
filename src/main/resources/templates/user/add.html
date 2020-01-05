@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th = "http://www.thymeleaf.org/">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Add User</title>
+    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
 </head>
 <body>
+<h1>Add User</h1>
 
 <form method="post">
     <div>
@@ -24,8 +26,11 @@
     </div>
     <div>
         <label>Verify password
-            <input type="password" name="verifyPassword" />
+            <input type="password" name="verify" />
         </label>
+    </div>
+    <div>
+        <input type="submit" value="Add Me!" />
     </div>
 </form>
 
